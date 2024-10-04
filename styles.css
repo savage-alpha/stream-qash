@@ -330,32 +330,36 @@ form button:hover {
     background-color: #388e3c;
 }
 
-/* Media Gallery Section */
-.media-gallery {
-    padding: 5rem 2rem;
-}
-
-.media-gallery h2 {
+/* Loading and Success State */
+#form-feedback {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-top: 20px;
 }
 
-.media-gallery .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Reduced minimum size for better fit */
-    gap: 1.5rem;
+.loader {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #4CAF50; /* Green */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin: 0 auto;
 }
 
-.media-gallery img {
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-.media-gallery img:hover {
-    transform: scale(1.05);
+.success {
+    font-size: 3rem;
+    color: #4CAF50;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
 }
 
 /* Footer */
@@ -378,7 +382,7 @@ footer a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
-        display: none; /* Hide the menu by default */
+        display: none;
     }
 
     nav .menu-icon {
