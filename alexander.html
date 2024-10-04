@@ -247,14 +247,18 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form action="#">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+    <h2>Contact Us</h2>
+    <form id="contact-form" action="#">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <div id="form-feedback" class="hidden">
+            <div class="loader"></div>
+            <div class="success hidden">&#10004;</div>
+        </div>
+    </form>
+</section>
 
     <!-- Media Gallery Section -->
     <section id="media" class="media-gallery">
